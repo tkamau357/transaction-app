@@ -1,0 +1,36 @@
+body{
+  background-color: rgb(184, 184, 184);
+  padding-left: 10px;
+}
+
+h1{
+  text-align: center;
+}
+
+.searchbar{
+  text-align: center;
+  padding-top: 10px;
+}
+
+form{
+  text-align: center;
+  padding: 10px;
+  
+}
+table{
+  padding-left:15%;
+  text-align: center;
+  width: 100%;
+}
+
+
+input[type=text] {
+  border: 5px;
+  border-radius: 5px;
+  margin: 8px 0;
+}
+
+input[type=submit] {
+  border-radius: 15px;
+  border: 5px;
+}
