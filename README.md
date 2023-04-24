@@ -7,7 +7,7 @@ Create a react application that can display a table of all transactions. Fill ou
 
 ## Setup/Installation Requirements
 * In your project directory, create a db.json file and use this dataLinks to an external site. for your server DB.
-* Run this command to get the backend started: json-server --watch db.json --port 8001
+* Run this command to get the backend started: json-server --watch db.json --port 8001 (at src folder directory).
 * Test your server by visiting this route in the browser:(http://localhost:3001/)
 
 ## Technologies Used
