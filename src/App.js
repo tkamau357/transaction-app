@@ -1,12 +1,12 @@
 import './App.css';
 import Transactions from './components/Transactions';
-import Transactionfilter from './components/Transactionfilter';
+import Transactiondelete from './components/Transactiondelete';
 
 function App() {
   return (
     <div className="App">
       <Transactions/>
-      <Transactionfilter/>
+      <Transactiondelete/>
     </div>
   )
 

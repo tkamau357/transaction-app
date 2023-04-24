@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react';
 
-function Transactionfilter() {
-    const [transactions, deleteTransaction] = useState([]);
-    const [newTransaction, setNewTransaction] = useState;
+function Transactiondelete() {
+    const [transactions, removeTransaction] = useState([]);
+    const [setTransaction, deletedTransaction] = useState;
 
   function handleDeleteClick(e) {
     e.preventDefault();
-    setTransactions([...transactions, deleteTransaction]);
-    setNewTransaction({
+    setTransaction([...transactions, removeTransaction]);
+    deletedTransaction({
         id: '',
         date: '',
         description: '',
         category: '',
         amount: ''
     });
-    fetch(`http://localhost:8002/transactions/${transaction.id}`, {
+    fetch(`http://localhost:8002/transactions/${transactions.id}`, {
         method: "DELETE", 
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(deleteTransaction),
+        body: JSON.stringify(removeTransaction),
     })
     .then((r) => r.json())
-    .then((transactions) => setNewTransaction(transactions));
+    .then((transactions) => deletedTransaction(transactions));
    }
 
     return (
@@ -35,4 +35,4 @@ function Transactionfilter() {
 
 }
 
-export default Transactionfilter;
+export default Transactiondelete;
