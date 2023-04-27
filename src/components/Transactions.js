@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-function Transactions() {
+function Transactions(props) {
     const [transactions, setTransactions] = useState([]);
+    const {handleDelete} = props;
     const [searchTerm, setSearchTerm] = useState('');
     const [newTransaction, setNewTransaction] = useState({
         id: '',
@@ -12,7 +13,7 @@ function Transactions() {
     });
     
     useEffect(() => {
-        fetch('http://localhost:8002/transactions')
+        fetch('http://localhost:8001/transactions')
         .then((r) => r.json())
         .then((transactions) => setTransactions(transactions));
     }, []);
@@ -27,7 +28,7 @@ function Transactions() {
       category: '',
       amount: ''
     });
-    fetch('http://localhost:8002/transactions', {
+    fetch('http://localhost:8001/transactions', {
         method: "POST", 
         headers: {
             "Content-Type": "application/json",
@@ -97,6 +98,7 @@ function Transactions() {
               <td>{transaction.description}</td>
               <td>{transaction.category}</td>
               <td>{transaction.amount}</td>
+              <td><button onClick={() => handleDelete(transaction.id)}>Delete</button></td>
             </tr>
           ))}
         </tbody>
